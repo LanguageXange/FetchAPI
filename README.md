@@ -1,7 +1,7 @@
 ## View Live Demo at https://languagexange.github.io/FetchAPI/
 
 ### Learning notes: 
-- Use Fetch instead of XMLHTTPRequest
+- Use Fetch instead of XMLHttpRequest
 - Create a search bar to filter the movie title 
 - Understand the difference between source code and DOM
 (You'll notice that many tags are created in script.js rather than in html)
