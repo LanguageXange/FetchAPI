@@ -1,4 +1,4 @@
-## View Live Demo at 
+## View Live Demo at https://languagexange.github.io/FetchAPI/
 
 ### Learning notes: 
 - Use Fetch instead of XMLHTTPRequest
