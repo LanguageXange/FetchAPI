@@ -1,23 +1,3 @@
-// XMLHttpRequest
-
-// var request = new XMLHttpRequest();
-
-// request.open("GET", "https://ghibliapi.herokuapp.com/films");
-
-// request.onload = function () {
-//   var data = JSON.parse(this.response);
-//   if (request.status >= 200 && request.status < 400) {
-//     data.forEach((movie) => {
-//       console.log(movie.title);
-//       console.log(movie.description);
-//     });
-//   } else {
-//     console.log("error", error);
-//   }
-// };
-// request.send();
-//////
-// Fetch is the new way to do things
 
 fetch("https://ghibliapi.herokuapp.com/films")
   .then((res) => res.json())
@@ -43,20 +23,16 @@ container.setAttribute("class", "container");
 app.appendChild(container);
 
 function myFunction() {
-  var input, filter, ul, li, h1, i, txtValue;
+  var input, filter, li, h1, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  ul = document.getElementsByTagName("ul");
   li = document.getElementsByTagName("li");
 
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
+  for (let i = 0; i < li.length; i++) {
     h1 = li[i].getElementsByTagName("h1")[0];
     txtValue = h1.textContent || h1.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
+    li[i].style.display =
+      txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
   }
 }
+
